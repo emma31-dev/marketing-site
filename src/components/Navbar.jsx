@@ -44,12 +44,23 @@ function Navbar({ activePage, onNavigate }) {
                 </nav>
 
                 {/* CTA */}
-                <button
-                    onClick={() => handleNav("contact")}
-                    className="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-on-primary-fixed-variant transition-colors font-label-caps uppercase tracking-widest text-xs"
-                >
-                    Contact Us
-                </button>
+                <div className="hidden md:flex items-center gap-3">
+                    <button
+                        onClick={() => handleNav("contact")}
+                        className="inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-on-primary-fixed-variant transition-colors font-label-caps uppercase tracking-widest text-xs"
+                    >
+                        Contact Us
+                    </button>
+                    {/* Hidden admin link — small and discreet */}
+                    <button
+                        onClick={() => handleNav("admin")}
+                        className="text-outline hover:text-secondary transition-colors"
+                        aria-label="Admin"
+                        title="Admin portal"
+                    >
+                        <span className="material-symbols-outlined text-base">admin_panel_settings</span>
+                    </button>
+                </div>
 
                 {/* Mobile hamburger */}
                 <button
