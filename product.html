@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>All Listings - Estate Professional</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#862300",
+                    "primary": "#0043c8",
+                    "surface-container-highest": "#e0e3e5",
+                    "inverse-surface": "#2d3133",
+                    "secondary-fixed": "#d3e4fe",
+                    "surface-container-low": "#f2f4f6",
+                    "primary-fixed": "#dce1ff",
+                    "tertiary": "#972800",
+                    "secondary-fixed-dim": "#b7c8e1",
+                    "outline-variant": "#c3c5d9",
+                    "secondary-container": "#d0e1fb",
+                    "primary-fixed-dim": "#b6c4ff",
+                    "inverse-on-surface": "#eff1f3",
+                    "on-tertiary-container": "#ffe3db",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#004ee7",
+                    "on-tertiary": "#ffffff",
+                    "surface-container": "#eceef0",
+                    "on-secondary-container": "#54647a",
+                    "on-primary-fixed": "#001550",
+                    "surface-variant": "#e0e3e5",
+                    "on-surface": "#191c1e",
+                    "primary-container": "#0057ff",
+                    "tertiary-fixed-dim": "#ffb59f",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e6e8ea",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#e5e8ff",
+                    "on-tertiary-fixed": "#3a0a00",
+                    "on-error": "#ffffff",
+                    "background": "#f7f9fb",
+                    "surface-bright": "#f7f9fb",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#c13600",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#191c1e",
+                    "on-secondary-fixed": "#0b1c30",
+                    "surface-dim": "#d8dadc",
+                    "outline": "#737688",
+                    "surface": "#f7f9fb",
+                    "inverse-primary": "#b6c4ff",
+                    "tertiary-fixed": "#ffdbd1",
+                    "on-surface-variant": "#434656",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed-variant": "#38485d",
+                    "on-primary-fixed-variant": "#003ab2",
+                    "secondary": "#505f76"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "section-padding-desktop": "120px",
+                    "stack-md": "16px",
+                    "stack-lg": "32px",
+                    "stack-sm": "8px",
+                    "section-padding-mobile": "64px",
+                    "gutter": "32px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "headline-md": [
+                            "Manrope"
+                    ],
+                    "display-hero": [
+                            "Manrope"
+                    ],
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Manrope"
+                    ],
+                    "display-hero-mobile": [
+                            "Manrope"
+                    ]
+            },
+            "fontSize": {
+                    "headline-md": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-hero": [
+                            "72px",
+                            {
+                                    "lineHeight": "1.1",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "1",
+                                    "letterSpacing": "0.1em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-hero-mobile": [
+                            "40px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        /* Custom Ambient Shadow for Interactive Elevation */
+        .hover-ambient-shadow:hover {
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col">
+<!-- TopNavBar Shared Component -->
+<header class="bg-surface dark:bg-surface text-primary dark:text-inverse-primary font-body-md text-body-md fixed top-0 w-full flat no shadows transition-all duration-200 ease-in-out z-50 border-b border-surface-container-high bg-white">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<!-- Brand Logo -->
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface" href="#">
+                ESTATE
+            </a>
+<!-- Navigation Links (Desktop) -->
+<nav class="hidden md:flex space-x-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1" href="#">Properties</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">About</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors" href="#">Contact</a>
+</nav>
+<!-- Trailing Action -->
+<div class="flex items-center space-x-4">
+<button class="bg-primary text-white font-body-md py-2 px-6 rounded-lg hover:bg-primary-fixed-variant transition-colors duration-200">
+                    Get Started
+                </button>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-on-surface p-2">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow pt-[104px] pb-section-padding-mobile md:pb-section-padding-desktop">
+<!-- Header & Search Section -->
+<section class="max-w-container-max mx-auto px-gutter mb-stack-lg">
+<h1 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg font-semibold text-on-surface mb-stack-md">All Listings</h1>
+<!-- Search Bar -->
+<div class="bg-white border border-surface-container-high rounded-lg p-2 flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4 shadow-sm">
+<!-- Location Input -->
+<div class="flex-grow flex items-center border-b-2 border-transparent focus-within:border-primary transition-colors w-full md:w-auto p-2">
+<span class="material-symbols-outlined text-secondary mr-2" data-icon="location_on">location_on</span>
+<input class="w-full bg-transparent border-none focus:ring-0 text-body-md text-on-surface placeholder-secondary focus:outline-none" placeholder="Filter by location..." type="text"/>
+</div>
+<div class="h-8 w-px bg-surface-container-high hidden md:block"></div>
+<!-- Class Dropdown -->
+<div class="flex-grow flex items-center border-b-2 border-transparent focus-within:border-primary transition-colors w-full md:w-auto p-2 relative">
+<span class="material-symbols-outlined text-secondary mr-2" data-icon="home_work">home_work</span>
+<select class="w-full bg-transparent border-none focus:ring-0 text-body-md text-on-surface cursor-pointer focus:outline-none appearance-none">
+<option disabled="" selected="" value="">Class of house</option>
+<option value="luxury">Luxury</option>
+<option value="modern">Modern</option>
+<option value="classic">Classic</option>
+<option value="penthouse">Penthouse</option>
+</select>
+<span class="material-symbols-outlined text-secondary absolute right-2 pointer-events-none" data-icon="arrow_drop_down">arrow_drop_down</span>
+</div>
+<!-- Search Button -->
+<button class="bg-primary text-white font-body-md py-3 px-8 rounded-lg hover:bg-primary-fixed-variant transition-colors duration-200 w-full md:w-auto flex items-center justify-center">
+<span class="material-symbols-outlined mr-2" data-icon="search">search</span> Search
+                </button>
+</div>
+</section>
+<!-- Premade Filters Tab Bar -->
+<section class="max-w-container-max mx-auto px-gutter mb-stack-lg overflow-x-auto no-scrollbar">
+<div class="flex space-x-2 border-b border-surface-container-high pb-px min-w-max">
+<button class="px-4 py-3 text-body-md font-medium text-primary border-b-2 border-primary whitespace-nowrap">Trending</button>
+<button class="px-4 py-3 text-body-md font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap">New Construction</button>
+<button class="px-4 py-3 text-body-md font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap">Price Drop</button>
+<button class="px-4 py-3 text-body-md font-medium text-secondary hover:text-primary transition-colors whitespace-nowrap">Waterfront</button>
+</div>
+</section>
+<!-- Property Grid -->
+<section class="max-w-container-max mx-auto px-gutter mb-section-padding-mobile md:mb-section-padding-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-lg">
+<!-- Property Card 1 -->
+<article class="bg-white border border-surface-container-high rounded-lg overflow-hidden hover-ambient-shadow transition-shadow duration-300 flex flex-col cursor-pointer group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A modern luxury real estate exterior at twilight, featuring expansive floor-to-ceiling glass windows, warm interior lighting glowing against a minimalist concrete and wood facade, set against a pristine, uncluttered architectural landscape in a high-end minimalist style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDit7HBj_GIUfn9AGqzr7lV_0ZKGvVFVIpkXTydn8nKxrECMkx5CuTG9TdISDP_Eweb1LNINerzb9KyGUCnleJNvqyaD7uFzqqUb382HUVd0AF5GDCv-3QQjBVVUrKwVwPFWBBo_39JSUee3Ii4X4Jdf8t08WtD6hldY9ozSXx1EjVK-KUjDgQzr_4YmqxoR0arjdl3q4HQQcB8QQ7BklFnuSRevSRzLL6Jt8OYDWKfJyLmNYJQo1zb6g"/>
+<div class="absolute top-4 left-4">
+<span class="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps px-2 py-1 rounded">NEW</span>
+</div>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface">$4,250,000</h3>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<p class="text-body-md text-secondary mb-4 flex items-center">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="location_on">location_on</span> 1200 Skyline Blvd, Beverly Hills
+                            </p>
+</div>
+<div class="flex space-x-4 border-t border-surface-container-high pt-4">
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="bed">bed</span> 4
+                            </div>
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="bathtub">bathtub</span> 5
+                            </div>
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="square_foot">square_foot</span> 4,500 sqft
+                            </div>
+</div>
+</div>
+</article>
+<!-- Property Card 2 -->
+<article class="bg-white border border-surface-container-high rounded-lg overflow-hidden hover-ambient-shadow transition-shadow duration-300 flex flex-col cursor-pointer group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A serene waterfront penthouse interior showcasing a vast open-plan living room with minimalist white furniture, polished concrete floors, and panoramic ocean views through massive frameless windows under bright, natural daylight, embodying a quiet luxury aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmpTLAhfXmVgAojrzN1GZgWCkQBydhiFgkX4WeHiV0pTh3OIZyQJuIVS-5U2PoHC0y9hIxlFKu0nEakpmPuY86euNwvZq9oG4u_5ujaOGHOuhdfZzNx36KKxGiEFkVgkhhgYOheGNmeeQv6QngDuhm67W5SnbVm5A4N5Ak9RrFLsQvb_H6J5ndnn45cVMbRTFCfSGJ3FHRroRkZbXmqD4XM1s4PVpr8BRC1KMr5vSxeFwxiuEKlZ52cg"/>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface">$2,895,000</h3>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<p class="text-body-md text-secondary mb-4 flex items-center">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="location_on">location_on</span> 45 Marina Way, Miami Beach
+                            </p>
+</div>
+<div class="flex space-x-4 border-t border-surface-container-high pt-4">
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="bed">bed</span> 3
+                            </div>
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="bathtub">bathtub</span> 3.5
+                            </div>
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="square_foot">square_foot</span> 3,200 sqft
+                            </div>
+</div>
+</div>
+</article>
+<!-- Property Card 3 -->
+<article class="bg-white border border-surface-container-high rounded-lg overflow-hidden hover-ambient-shadow transition-shadow duration-300 flex flex-col cursor-pointer group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A classic yet modernized estate facade featuring symmetrical architecture, a manicured lawn, and a sleek infinity pool in the foreground, shot during golden hour with soft, directional light highlighting the clean lines and sophisticated, restrained color palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAhCgZX6IMutMaaLlxegj2AkVwRBajm5LpD4YFV4CYn5jUxiDRrWPAQoQSsBKTp04eTWhNW9WeAfjlov24zaviVbatLVH7kEUEkzBNerrAUx_mfF0asJ4GltLD6N-brB_Z3evQLGD8yk9tJLmhGpO9C3dxSnkUtWgFedGvvUxKBETDrFcRz_Uazt3pRODb4G4rq1gJmWeIdgob5TTIZv8nLyBOULDFdpjvRI2XiQ7BcdeLe4vlNr8oT6g"/>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface">$8,100,000</h3>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<p class="text-body-md text-secondary mb-4 flex items-center">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="location_on">location_on</span> 778 Oak Lane, Greenwich
+                            </p>
+</div>
+<div class="flex space-x-4 border-t border-surface-container-high pt-4">
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="bed">bed</span> 6
+                            </div>
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="bathtub">bathtub</span> 8
+                            </div>
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="square_foot">square_foot</span> 9,800 sqft
+                            </div>
+</div>
+</div>
+</article>
+<!-- Property Card 4 -->
+<article class="bg-white border border-surface-container-high rounded-lg overflow-hidden hover-ambient-shadow transition-shadow duration-300 flex flex-col cursor-pointer group">
+<div class="relative h-64 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An ultra-modern architectural kitchen with stark white custom cabinetry, a massive monolithic marble island, and recessed ambient lighting, presenting a pristine, clinical yet luxurious aesthetic consistent with a high-end light-mode real estate platform." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkOvFHTJMxSfj2FKTs4HZkWY5DdWzwjGCU2WmIJyB7_ZgbEmOZ1q4p9TNPqGUqspO_v5xgT7ET87UvpO1SsmSsbT86Kf_0q6H-BSuSvwgrCDOvaoL2VQ8R9HuWiARPLqPOFgIkMeHdP0BmBIOD6thvF0M7cDqKDHS6pZEafXozpTVnsbPCGyOhP_5VxWdVZf53mc0WMPJEsIZOD-JP8K2Px9qmeKSRtT5ybWb0cklIS4TU3ErytSDCiw"/>
+</div>
+<div class="p-6 flex-grow flex flex-col justify-between">
+<div>
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-body-lg font-bold text-on-surface">$1,950,000</h3>
+<button class="text-secondary hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite_border">favorite_border</span>
+</button>
+</div>
+<p class="text-body-md text-secondary mb-4 flex items-center">
+<span class="material-symbols-outlined text-sm mr-1" data-icon="location_on">location_on</span> 200 Central Ave, Downtown
+                            </p>
+</div>
+<div class="flex space-x-4 border-t border-surface-container-high pt-4">
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="bed">bed</span> 2
+                            </div>
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="bathtub">bathtub</span> 2
+                            </div>
+<div class="flex items-center text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-base mr-1" data-icon="square_foot">square_foot</span> 1,850 sqft
+                            </div>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Pagination -->
+<section class="max-w-container-max mx-auto px-gutter flex justify-center">
+<div class="flex items-center space-x-2">
+<button class="px-4 py-2 border border-surface-container-high rounded-lg text-secondary hover:text-on-surface hover:border-outline transition-colors text-body-md bg-white cursor-not-allowed opacity-50" disabled="">
+                    Previous
+                </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg bg-primary text-white font-medium text-body-md">
+                    1
+                </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-surface-container-high bg-white text-secondary hover:text-on-surface hover:border-outline transition-colors font-medium text-body-md">
+                    2
+                </button>
+<button class="w-10 h-10 flex items-center justify-center rounded-lg border border-surface-container-high bg-white text-secondary hover:text-on-surface hover:border-outline transition-colors font-medium text-body-md">
+                    3
+                </button>
+<span class="text-secondary px-2">...</span>
+<button class="px-4 py-2 border border-surface-container-high rounded-lg text-secondary hover:text-on-surface hover:border-outline transition-colors text-body-md bg-white">
+                    Next
+                </button>
+</div>
+</section>
+</main>
+<!-- Footer Shared Component -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest text-primary dark:text-inverse-primary font-body-md text-body-md w-full py-stack-lg border-t border-outline-variant dark:border-outline flat no shadows transition-opacity duration-150">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
+<!-- Brand & Copyright -->
+<div class="flex flex-col items-center md:items-start">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface mb-2" href="#">
+                    ESTATE
+                </a>
+<p class="text-secondary dark:text-secondary-fixed-dim text-sm">© 2024 Estate Professional. All rights reserved.</p>
+</div>
+<!-- Links -->
+<nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Terms of Service</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Cookie Policy</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#">Sitemap</a>
+</nav>
+</div>
+</footer>
+</body></html>

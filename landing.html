@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ESTATE | Minimalist Real Estate</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;family=Manrope:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#38485d",
+                      "inverse-primary": "#b6c4ff",
+                      "on-tertiary-fixed": "#3a0a00",
+                      "inverse-on-surface": "#eff1f3",
+                      "on-surface-variant": "#434656",
+                      "tertiary-container": "#c13600",
+                      "surface-container-high": "#e6e8ea",
+                      "on-error": "#ffffff",
+                      "surface-variant": "#e0e3e5",
+                      "on-secondary-fixed": "#0b1c30",
+                      "background": "#f7f9fb",
+                      "surface": "#f7f9fb",
+                      "primary-fixed-dim": "#b6c4ff",
+                      "secondary-fixed-dim": "#b7c8e1",
+                      "on-primary-fixed": "#001550",
+                      "secondary-fixed": "#d3e4fe",
+                      "error-container": "#ffdad6",
+                      "surface-bright": "#f7f9fb",
+                      "on-primary-container": "#e5e8ff",
+                      "outline": "#737688",
+                      "tertiary-fixed-dim": "#ffb59f",
+                      "error": "#ba1a1a",
+                      "tertiary-fixed": "#ffdbd1",
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-low": "#f2f4f6",
+                      "on-surface": "#191c1e",
+                      "on-secondary-container": "#54647a",
+                      "primary-fixed": "#dce1ff",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#0043c8",
+                      "tertiary": "#972800",
+                      "on-error-container": "#93000a",
+                      "on-background": "#191c1e",
+                      "surface-container": "#eceef0",
+                      "on-primary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e0e3e5",
+                      "surface-tint": "#004ee7",
+                      "surface-dim": "#d8dadc",
+                      "secondary": "#505f76",
+                      "primary-container": "#0057ff",
+                      "on-tertiary-container": "#ffe3db",
+                      "on-tertiary-fixed-variant": "#862300",
+                      "on-primary-fixed-variant": "#003ab2",
+                      "inverse-surface": "#2d3133",
+                      "secondary-container": "#d0e1fb",
+                      "outline-variant": "#c3c5d9"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "section-padding-mobile": "64px",
+                      "stack-sm": "8px",
+                      "section-padding-desktop": "120px",
+                      "stack-lg": "32px",
+                      "stack-md": "16px",
+                      "gutter": "32px",
+                      "container-max": "1280px"
+              },
+              "fontFamily": {
+                      "display-hero": [
+                              "Manrope"
+                      ],
+                      "display-hero-mobile": [
+                              "Manrope"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-lg": [
+                              "Manrope"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Manrope"
+                      ]
+              },
+              "fontSize": {
+                      "display-hero": [
+                              "72px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "display-hero-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-lg": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "600"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .glass-card {
+            background: rgba(247, 249, 251, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(226, 232, 240, 0.5);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden pt-20">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-surface text-primary dark:text-inverse-primary font-body-md text-body-md fixed top-0 w-full border-b border-outline-variant dark:border-outline flat no shadows transition-all duration-200 ease-in-out z-50">
+<div class="max-w-container-max mx-auto px-gutter flex justify-between items-center h-20">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface" href="#">ESTATE</a>
+<nav class="hidden md:flex items-center space-x-stack-lg">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim" href="#">Properties</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim" href="#">About</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary transition-colors hover:text-primary dark:hover:text-primary-fixed-dim" href="#">Contact</a>
+</nav>
+<a class="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded hover:bg-on-primary-fixed-variant transition-colors font-label-caps text-label-caps uppercase tracking-widest" href="#">
+                Get Started
+            </a>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="max-w-container-max mx-auto px-gutter pt-section-padding-mobile md:pt-section-padding-desktop pb-section-padding-mobile flex flex-col items-center text-center">
+<h1 class="font-display-hero-mobile text-display-hero-mobile md:font-display-hero md:text-display-hero text-on-surface max-w-4xl mb-stack-lg leading-tight">
+                Find your perfect <span class="text-primary">SPACE</span> in the city
+            </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-2xl mb-stack-lg">
+                Discover exceptional properties curated for the modern lifestyle. Expert guidance, premium listings, and a seamless experience.
+            </p>
+<div class="flex flex-col sm:flex-row gap-stack-md">
+<a class="inline-flex items-center justify-center bg-primary text-on-primary px-8 py-4 rounded hover:bg-on-primary-fixed-variant transition-colors font-body-lg text-body-lg shadow-sm hover:shadow-lg hover:shadow-primary/20" href="#properties">
+                    Explore Properties
+                </a>
+</div>
+</section>
+<!-- Search Bar -->
+<section class="max-w-container-max mx-auto px-gutter pb-section-padding-mobile md:pb-section-padding-desktop">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-lg p-stack-md shadow-sm max-w-4xl mx-auto flex flex-col md:flex-row gap-stack-md">
+<div class="flex-1 border-b-2 border-outline-variant md:border-b-0 md:border-r-2 md:border-outline-variant focus-within:border-primary transition-colors px-4 py-2">
+<label class="block font-label-caps text-label-caps text-secondary mb-1">Location</label>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body-md" placeholder="City, Neighborhood, or ZIP" type="text"/>
+</div>
+<div class="flex-1 border-b-2 border-outline-variant md:border-b-0 md:border-r-2 md:border-outline-variant focus-within:border-primary transition-colors px-4 py-2">
+<label class="block font-label-caps text-label-caps text-secondary mb-1">Property Type</label>
+<select class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body-md appearance-none">
+<option>Any Type</option>
+<option>Condo</option>
+<option>Penthouse</option>
+<option>Townhouse</option>
+</select>
+</div>
+<div class="flex-1 border-b-2 border-outline-variant md:border-b-0 focus-within:border-primary transition-colors px-4 py-2">
+<label class="block font-label-caps text-label-caps text-secondary mb-1">Price Range</label>
+<select class="w-full bg-transparent border-none p-0 focus:ring-0 text-on-surface font-body-md appearance-none">
+<option>Any Price</option>
+<option>$500k - $1M</option>
+<option>$1M - $2M</option>
+<option>$2M+</option>
+</select>
+</div>
+<button class="bg-on-surface text-on-primary p-4 rounded hover:bg-secondary transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined">search</span>
+</button>
+</div>
+</section>
+<!-- Featured Properties -->
+<section class="bg-surface-container-low py-section-padding-mobile md:py-section-padding-desktop" id="properties">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex justify-between items-end mb-stack-lg">
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Featured Listings</h2>
+<a class="hidden sm:inline-flex items-center text-primary font-label-caps text-label-caps hover:text-on-primary-fixed-variant transition-colors uppercase tracking-widest" href="#">
+                        View All <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-stack-lg">
+<!-- Property Card 1 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded group hover:shadow-2xl hover:shadow-on-surface/5 transition-all duration-300">
+<div class="aspect-[4/3] relative overflow-hidden rounded-t">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A bright, minimalist living room in a modern luxury penthouse. Floor-to-ceiling windows offer a sweeping view of a city skyline at golden hour. The room features a pale grey sofa, a sleek glass coffee table, and light oak floors. The lighting is soft and natural, emphasizing the pristine white walls and high-end architectural finishes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5GOdBWxr1XeovZDxP9uLn6teJ9xmA9O35GSI6dIvDfCqlyyJ0W_txc64IkmsU6KXvB4Sk1sah7Y_cz27tXuwD4UvkXtXlzvYIMUSxwmFbYQYtIawxjDkRdkS_ahta05e6m3b1WZ_VZFRrP1HNWZSmmj2OEPRf8HokrdjcaEOXaXnCYqtLw0P2oReIG8GYavkVyK-kSVbphXS558-gh9PGNlrylcngisn2iu2JkgsERmB02L5d5_dPAg"/>
+<div class="absolute top-4 left-4 bg-surface/90 backdrop-blur-sm px-3 py-1 rounded font-label-caps text-label-caps text-on-surface uppercase tracking-wider">
+                                New
+                            </div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface text-xl">The Glass House</h3>
+<span class="font-body-md text-body-md text-secondary font-semibold">$2,450,000</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">West Village, New York</p>
+<div class="flex items-center space-x-4 mb-6 text-sm text-secondary">
+<span class="flex items-center"><span class="material-symbols-outlined mr-1 text-sm">bed</span> 3 Bed</span>
+<span class="flex items-center"><span class="material-symbols-outlined mr-1 text-sm">shower</span> 2 Bath</span>
+<span class="flex items-center"><span class="material-symbols-outlined mr-1 text-sm">square_foot</span> 2,100 sqft</span>
+</div>
+<a class="inline-flex items-center text-primary font-label-caps text-label-caps hover:text-on-primary-fixed-variant transition-colors uppercase tracking-widest" href="#">
+                                View Details <span class="material-symbols-outlined ml-1 text-sm">arrow_right_alt</span>
+</a>
+</div>
+</article>
+<!-- Property Card 2 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded group hover:shadow-2xl hover:shadow-on-surface/5 transition-all duration-300">
+<div class="aspect-[4/3] relative overflow-hidden rounded-t">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="An exterior shot of a sleek, contemporary townhouse with a flat roof and large structural glass panels. The facade is a mix of smooth white concrete and warm vertical wood slats. The property is set against a clear blue sky in daylight. The aesthetic is clean, structured, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2Go6xvT9HGBOzZ6kYUAx1I72A7gnZ4IKXQ0Tzc8COaropIusE9MqF7tgfs53wkZ_oeXAFmE7SnVaH5aTZtsU97IMYNft_Vh8bQD7fKgOyaRA2b-tF5hEVKKOtEyAadvINVxWvdEFbpxO10bxCemE2hWtg2C5XP_lV6WkvMClRcn8es9hMDi8s_3zgGZ74JmCwDeRniXIth8wesgIooDQX8f65zlHhLXtoHTO09e-5cvYBSYJxv3AM4w"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface text-xl">Arbor Row</h3>
+<span class="font-body-md text-body-md text-secondary font-semibold">$1,850,000</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Lincoln Park, Chicago</p>
+<div class="flex items-center space-x-4 mb-6 text-sm text-secondary">
+<span class="flex items-center"><span class="material-symbols-outlined mr-1 text-sm">bed</span> 4 Bed</span>
+<span class="flex items-center"><span class="material-symbols-outlined mr-1 text-sm">shower</span> 3.5 Bath</span>
+<span class="flex items-center"><span class="material-symbols-outlined mr-1 text-sm">square_foot</span> 3,200 sqft</span>
+</div>
+<a class="inline-flex items-center text-primary font-label-caps text-label-caps hover:text-on-primary-fixed-variant transition-colors uppercase tracking-widest" href="#">
+                                View Details <span class="material-symbols-outlined ml-1 text-sm">arrow_right_alt</span>
+</a>
+</div>
+</article>
+<!-- Property Card 3 -->
+<article class="bg-surface-container-lowest border border-outline-variant rounded group hover:shadow-2xl hover:shadow-on-surface/5 transition-all duration-300">
+<div class="aspect-[4/3] relative overflow-hidden rounded-t">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A minimalist, high-end kitchen interior featuring seamless matte white cabinetry and a large marble island. A simple vase with structural greenery sits on the counter. The space is flooded with bright, diffuse natural light, creating a stark, clean, and luxurious atmosphere typical of modern premium real estate design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwqnKB-VJ6Oh4wWuNKGTi06Y6LvDYTHI0ShJE9Hs2qrs6BwEaXRPssra3PzOaX2wj0ZOWkpfF78cn6P-aNq19scfpMHmWFCB7z6T7QdANJ6Y2d2VWZxMVAABAkhzmcSTBHFKariRqY0RYbm9n0mMF6PGgnYp7UfcO8Sq0XsLKTg_uBGNyMWv97gfRhi_q6Dszp8o5I4DmMlA1G9GjpcWD-9emCFJ5Zb6g_86C8HEaMo0WAenBH38ofYg"/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-headline-md text-headline-md text-on-surface text-xl">The Minimalist</h3>
+<span class="font-body-md text-body-md text-secondary font-semibold">$3,100,000</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-4">Beverly Hills, LA</p>
+<div class="flex items-center space-x-4 mb-6 text-sm text-secondary">
+<span class="flex items-center"><span class="material-symbols-outlined mr-1 text-sm">bed</span> 2 Bed</span>
+<span class="flex items-center"><span class="material-symbols-outlined mr-1 text-sm">shower</span> 2.5 Bath</span>
+<span class="flex items-center"><span class="material-symbols-outlined mr-1 text-sm">square_foot</span> 2,800 sqft</span>
+</div>
+<a class="inline-flex items-center text-primary font-label-caps text-label-caps hover:text-on-primary-fixed-variant transition-colors uppercase tracking-widest" href="#">
+                                View Details <span class="material-symbols-outlined ml-1 text-sm">arrow_right_alt</span>
+</a>
+</div>
+</article>
+</div>
+<div class="mt-stack-lg text-center sm:hidden">
+<a class="inline-flex items-center justify-center px-6 py-3 border border-outline-variant rounded font-label-caps text-label-caps text-on-surface hover:bg-surface-container-high transition-colors w-full uppercase tracking-widest" href="#">
+                        View All Listings
+                    </a>
+</div>
+</div>
+</section>
+<!-- Trust Section -->
+<section class="max-w-container-max mx-auto px-gutter py-section-padding-mobile md:py-section-padding-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg text-center">
+<div class="p-6">
+<div class="w-16 h-16 mx-auto mb-6 bg-surface-container-low rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">real_estate_agent</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl mb-4">Expert Guidance</h3>
+<p class="font-body-md text-body-md text-secondary">
+                        Our seasoned professionals provide tailored advice, ensuring you make informed decisions every step of the way.
+                    </p>
+</div>
+<div class="p-6 border-y md:border-y-0 md:border-x border-outline-variant/30">
+<div class="w-16 h-16 mx-auto mb-6 bg-surface-container-low rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl mb-4">Secure Transactions</h3>
+<p class="font-body-md text-body-md text-secondary">
+                        We prioritize transparency and security, managing all complexities to deliver a seamless closing process.
+                    </p>
+</div>
+<div class="p-6">
+<div class="w-16 h-16 mx-auto mb-6 bg-surface-container-low rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-3xl">diamond</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface text-2xl mb-4">Premium Listings</h3>
+<p class="font-body-md text-body-md text-secondary">
+                        Access an exclusive portfolio of high-end properties, meticulously vetted for architectural quality and location.
+                    </p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest text-primary dark:text-inverse-primary font-body-md text-body-md w-full py-stack-lg border-t border-outline-variant dark:border-outline flat no shadows transition-opacity duration-150">
+<div class="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center">
+<div class="mb-4 md:mb-0">
+<span class="font-headline-md text-headline-md font-bold text-on-surface dark:text-inverse-on-surface">ESTATE</span>
+<p class="mt-2 text-secondary dark:text-secondary-fixed-dim text-sm">© 2024 Estate Professional. All rights reserved.</p>
+</div>
+<nav class="flex flex-wrap justify-center gap-x-6 gap-y-2">
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors text-sm" href="#">Privacy Policy</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors text-sm" href="#">Terms of Service</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors text-sm" href="#">Cookie Policy</a>
+<a class="text-secondary dark:text-secondary-fixed-dim hover:text-primary dark:hover:text-primary-fixed-dim transition-colors text-sm" href="#">Sitemap</a>
+</nav>
+</div>
+</footer>
+</body></html>
