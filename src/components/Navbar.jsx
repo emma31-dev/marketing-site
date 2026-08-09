@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Icon from "./Icon";
 
 const NAV_LINKS = [
     { label: "Home", page: "landing" },
@@ -23,7 +24,7 @@ function Navbar({ activePage, onNavigate }) {
                     onClick={() => handleNav("landing")}
                     className="font-headline-md font-bold text-on-surface text-2xl"
                 >
-                    PADESTATE
+                    STEPHEN'S GATE
                 </button>
 
                 {/* Desktop nav */}
@@ -58,7 +59,7 @@ function Navbar({ activePage, onNavigate }) {
                         aria-label="Admin"
                         title="Admin portal"
                     >
-                        <span className="material-symbols-outlined text-base">admin_panel_settings</span>
+                        <Icon name="admin_panel_settings" size={20} />
                     </button>
                 </div>
 
@@ -68,7 +69,7 @@ function Navbar({ activePage, onNavigate }) {
                     aria-label="Toggle menu"
                     onClick={() => setMenuOpen(!menuOpen)}
                 >
-                    <span className="material-symbols-outlined">{menuOpen ? "close" : "menu"}</span>
+                    <Icon name={menuOpen ? "close" : "menu"} size={24} />
                 </button>
             </div>
 

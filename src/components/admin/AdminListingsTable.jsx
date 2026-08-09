@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Icon from "../Icon";
 
 function AdminListingsTable({ listings, onEdit, onDelete }) {
     const [deleteConfirm, setDeleteConfirm] = useState(null); // id of listing pending delete
@@ -97,7 +98,7 @@ function AdminListingsTable({ listings, onEdit, onDelete }) {
                                             className="flex items-center gap-1 text-primary hover:text-on-primary-fixed-variant text-xs font-semibold transition-colors px-2 py-1.5 rounded hover:bg-primary/10"
                                             aria-label={`Edit ${l.name}`}
                                         >
-                                            <span className="material-symbols-outlined text-base">edit</span>
+                                            <Icon name="edit" size={18} />
                                             Edit
                                         </button>
                                         <button
@@ -105,7 +106,7 @@ function AdminListingsTable({ listings, onEdit, onDelete }) {
                                             className="flex items-center gap-1 text-error hover:text-error/80 text-xs font-semibold transition-colors px-2 py-1.5 rounded hover:bg-error/10"
                                             aria-label={`Delete ${l.name}`}
                                         >
-                                            <span className="material-symbols-outlined text-base">delete</span>
+                                            <Icon name="delete" size={18} />
                                             Delete
                                         </button>
                                     </div>
@@ -122,7 +123,7 @@ function AdminListingsTable({ listings, onEdit, onDelete }) {
                     <div className="absolute inset-0 bg-inverse-surface/40 backdrop-blur-sm" onClick={() => setDeleteConfirm(null)} />
                     <div className="relative z-10 bg-surface border border-outline-variant rounded-xl p-6 w-full max-w-sm shadow-2xl">
                         <div className="flex items-center gap-3 mb-4">
-                            <span className="material-symbols-outlined text-error text-3xl">warning</span>
+                            <Icon name="warning" size={32} className="text-error" />
                             <h3 className="text-lg font-semibold text-on-surface">Delete listing?</h3>
                         </div>
                         <p className="text-secondary text-sm mb-6">

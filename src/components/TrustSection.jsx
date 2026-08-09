@@ -1,3 +1,5 @@
+import Icon from "./Icon";
+
 const TRUST_ITEMS = [
     {
         icon: "real_estate_agent",
@@ -10,7 +12,7 @@ const TRUST_ITEMS = [
         icon: "verified_user",
         title: "Verified Titles",
         description:
-            "Every listing on PadEstate is title-verified and legally screened. We eliminate the risk of C-of-O disputes so your investment is protected.",
+            "Every listing on Stephen's Gate is title-verified and legally screened. We eliminate the risk of C-of-O disputes so your investment is protected.",
         border: "border-y md:border-y-0 md:border-x border-outline-variant/30",
     },
     {
@@ -29,7 +31,7 @@ function TrustSection() {
                 {TRUST_ITEMS.map(({ icon, title, description, border }) => (
                     <div key={title} className={`p-6 ${border}`}>
                         <div className="w-16 h-16 mx-auto mb-6 bg-surface-container-low rounded-full flex items-center justify-center text-secondary">
-                            <span className="material-symbols-outlined text-3xl">{icon}</span>
+                            <Icon name={icon} size={32} />
                         </div>
                         <h3 className="text-2xl font-semibold text-on-surface mb-4">{title}</h3>
                         <p className="text-base text-secondary leading-relaxed">{description}</p>

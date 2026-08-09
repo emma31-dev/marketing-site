@@ -4,6 +4,7 @@ import ListingsSearchBar from "./ListingsSearchBar";
 import FilterTabs from "./FilterTabs";
 import PropertyCard from "./PropertyCard";
 import Pagination from "./Pagination";
+import Icon from "./Icon";
 
 const PAGE_SIZE = 6;
 
@@ -112,7 +113,7 @@ function AllListingsPage() {
                     </div>
                 ) : (
                     <div className="flex flex-col items-center justify-center py-24 text-center gap-4">
-                        <span className="material-symbols-outlined text-5xl text-secondary">search_off</span>
+                        <Icon name="search_off" size={48} className="text-secondary" />
                         <p className="text-lg font-semibold text-on-surface">No results found</p>
                         <p className="text-secondary text-base max-w-sm">
                             Try adjusting your location, price range, or property class.

@@ -1,3 +1,5 @@
+import Icon from "./Icon";
+
 /**
  * PropertyCard — reusable card for property listings.
  *
@@ -79,7 +81,7 @@ function PropertyCard({
                                     className="text-secondary hover:text-primary transition-colors"
                                     aria-label="Save to favourites"
                                 >
-                                    <span className="material-symbols-outlined">favorite_border</span>
+                                    <Icon name="favorite_border" size={24} />
                                 </button>
                             )}
                         </div>
@@ -89,7 +91,7 @@ function PropertyCard({
                         )}
                         {/* City, State */}
                         <p className="text-sm text-secondary mb-4 flex items-center">
-                            <span className="material-symbols-outlined text-sm mr-1">location_on</span>
+                            <Icon name="location_on" size={18} className="mr-1 shrink-0" />
                             {locationLine}
                         </p>
                     </div>
@@ -98,19 +100,19 @@ function PropertyCard({
                     <div className="flex space-x-4 border-t border-surface-container-high pt-4">
                         {isLand ? (
                             <div className="flex items-center text-on-surface-variant text-sm">
-                                <span className="material-symbols-outlined text-base mr-1">landscape</span>
+                                <Icon name="landscape" size={18} className="mr-1" />
                                 {sqft}
                             </div>
                         ) : (
                             <>
                                 <div className="flex items-center text-on-surface-variant text-sm">
-                                    <span className="material-symbols-outlined text-base mr-1">bed</span> {beds}
+                                    <Icon name="bed" size={18} className="mr-1" /> {beds}
                                 </div>
                                 <div className="flex items-center text-on-surface-variant text-sm">
-                                    <span className="material-symbols-outlined text-base mr-1">bathtub</span> {baths}
+                                    <Icon name="bathtub" size={18} className="mr-1" /> {baths}
                                 </div>
                                 <div className="flex items-center text-on-surface-variant text-sm">
-                                    <span className="material-symbols-outlined text-base mr-1">square_foot</span> {sqft}
+                                    <Icon name="square_foot" size={18} className="mr-1" /> {sqft}
                                 </div>
                             </>
                         )}
@@ -147,18 +149,18 @@ function PropertyCard({
                 <div className="flex items-center space-x-4 mb-6 text-sm text-secondary">
                     {isLand ? (
                         <span className="flex items-center">
-                            <span className="material-symbols-outlined mr-1 text-sm">landscape</span> {sqft}
+                            <Icon name="landscape" size={18} className="mr-1" /> {sqft}
                         </span>
                     ) : (
                         <>
                             <span className="flex items-center">
-                                <span className="material-symbols-outlined mr-1 text-sm">bed</span> {beds} Bed
+                                <Icon name="bed" size={18} className="mr-1" /> {beds} Bed
                             </span>
                             <span className="flex items-center">
-                                <span className="material-symbols-outlined mr-1 text-sm">shower</span> {baths} Bath
+                                <Icon name="shower" size={18} className="mr-1" /> {baths} Bath
                             </span>
                             <span className="flex items-center">
-                                <span className="material-symbols-outlined mr-1 text-sm">square_foot</span> {sqft}
+                                <Icon name="square_foot" size={18} className="mr-1" /> {sqft}
                             </span>
                         </>
                     )}
@@ -168,7 +170,7 @@ function PropertyCard({
                     href="#"
                     className="inline-flex items-center text-primary font-label-caps text-xs hover:text-on-primary-fixed-variant transition-colors uppercase tracking-widest"
                 >
-                    View Details <span className="material-symbols-outlined ml-1 text-sm">arrow_right_alt</span>
+                    View Details <Icon name="arrow_right_alt" size={18} className="ml-1" />
                 </a>
             </div>
         </article>

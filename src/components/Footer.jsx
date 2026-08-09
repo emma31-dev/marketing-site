@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
+import Icon from "./Icon";
 
 const LEGAL_CONTENT = {
     "Privacy Policy": {
         lastUpdated: "1 July 2025",
         body: `
 ## 1. Introduction
-PadEstate Nigeria Limited ("PadEstate", "we", "us", or "our") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
+Stephen's Gate Nigeria Limited ("Stephen's Gate", "we", "us", or "our") is committed to protecting your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or use our services.
 
 ## 2. Information We Collect
 We may collect the following categories of personal information:
@@ -27,10 +28,10 @@ We do not sell your personal information. We may share it with:
 - Law enforcement or regulatory authorities when required by applicable law.
 
 ## 5. Data Retention
-We retain your personal data for as long as necessary to fulfil the purposes described in this policy, or as required by law. You may request deletion of your data at any time by contacting us at privacy@padestate.ng.
+We retain your personal data for as long as necessary to fulfil the purposes described in this policy, or as required by law. You may request deletion of your data at any time by contacting us at privacy@stephensgate.ng.
 
 ## 6. Your Rights
-Under the Nigeria Data Protection Act (NDPA) 2023, you have the right to access, correct, or delete your personal data, and to object to or restrict certain processing. To exercise any of these rights, contact us at privacy@padestate.ng.
+Under the Nigeria Data Protection Act (NDPA) 2023, you have the right to access, correct, or delete your personal data, and to object to or restrict certain processing. To exercise any of these rights, contact us at privacy@stephensgate.ng.
 
 ## 7. Cookies
 We use essential cookies to operate our website and optional analytics cookies to understand how visitors use our site. You may disable non-essential cookies through your browser settings at any time.
@@ -43,19 +44,19 @@ We may update this policy periodically. We will notify you of material changes b
 
 ## 10. Contact Us
 If you have any questions about this policy, please contact our Data Protection Officer at:
-**PadEstate Nigeria Limited**
+**Stephen's Gate Nigeria Limited**
 14 Adeola Odeku Street, 5th Floor, Victoria Island, Lagos 101241
-Email: privacy@padestate.ng | Phone: +234 (0) 812 345 6789
+Email: privacy@stephensgate.ng | Phone: +234 (0) 812 345 6789
     `,
     },
     "Terms of Service": {
         lastUpdated: "1 July 2025",
         body: `
 ## 1. Acceptance of Terms
-By accessing or using the PadEstate website and services, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, please do not use our services.
+By accessing or using the Stephen's Gate website and services, you agree to be bound by these Terms of Service and our Privacy Policy. If you do not agree, please do not use our services.
 
 ## 2. Services Provided
-PadEstate provides an online platform for listing, searching, and enquiring about residential and commercial real estate in Nigeria. We act as an intermediary between buyers, sellers, and developers. We do not guarantee the availability, accuracy, or legal status of any listing.
+Stephen's Gate provides an online platform for listing, searching, and enquiring about residential and commercial real estate in Nigeria. We act as an intermediary between buyers, sellers, and developers. We do not guarantee the availability, accuracy, or legal status of any listing.
 
 ## 3. User Responsibilities
 You agree to:
@@ -65,13 +66,13 @@ You agree to:
 - Not submit fraudulent enquiries or impersonate any person or entity.
 
 ## 4. Listings and Accuracy
-While we make every effort to verify listings and titles, PadEstate does not warrant that any listing is free from errors, encumbrances, or legal disputes. We strongly recommend that all buyers engage an independent legal practitioner and conduct due diligence before completing any transaction.
+While we make every effort to verify listings and titles, Stephen's Gate does not warrant that any listing is free from errors, encumbrances, or legal disputes. We strongly recommend that all buyers engage an independent legal practitioner and conduct due diligence before completing any transaction.
 
 ## 5. Intellectual Property
-All content on this website, including text, images, graphics, and data, is the property of PadEstate Nigeria Limited or its licensors and is protected by applicable copyright laws. You may not use our content for commercial purposes without prior written consent.
+All content on this website, including text, images, graphics, and data, is the property of Stephen's Gate Nigeria Limited or its licensors and is protected by applicable copyright laws. You may not use our content for commercial purposes without prior written consent.
 
 ## 6. Limitation of Liability
-To the fullest extent permitted by law, PadEstate shall not be liable for any indirect, incidental, or consequential damages arising from your use of our platform or reliance on any listing information. Our total liability in respect of any claim shall not exceed the fees paid by you to PadEstate in the three months preceding the claim.
+To the fullest extent permitted by law, Stephen's Gate shall not be liable for any indirect, incidental, or consequential damages arising from your use of our platform or reliance on any listing information. Our total liability in respect of any claim shall not exceed the fees paid by you to Stephen's Gate in the three months preceding the claim.
 
 ## 7. Governing Law
 These Terms are governed by the laws of the Federal Republic of Nigeria. Any disputes shall be subject to the exclusive jurisdiction of the courts of Lagos State.
@@ -80,7 +81,7 @@ These Terms are governed by the laws of the Federal Republic of Nigeria. Any dis
 We reserve the right to amend these Terms at any time. Continued use of our services following notification of changes constitutes your acceptance of the revised Terms.
 
 ## 9. Contact
-For questions regarding these Terms, contact us at legal@padestate.ng.
+For questions regarding these Terms, contact us at legal@stephensgate.ng.
     `,
     },
     "Cookie Policy": {
@@ -90,7 +91,7 @@ For questions regarding these Terms, contact us at legal@padestate.ng.
 Cookies are small text files placed on your device when you visit a website. They allow the website to recognise your device, remember your preferences, and improve your browsing experience.
 
 ## 2. How We Use Cookies
-PadEstate uses the following categories of cookies:
+Stephen's Gate uses the following categories of cookies:
 
 **Essential Cookies**
 These are necessary for the website to function and cannot be disabled. They include cookies that manage your session, remember your search filters during a visit, and ensure security features work correctly.
@@ -114,7 +115,7 @@ We do not currently use third-party advertising cookies. If this changes, we wil
 We may update this Cookie Policy to reflect changes in technology or regulation. Please check this page periodically for updates.
 
 ## 6. Contact
-If you have questions about our use of cookies, contact us at privacy@padestate.ng.
+If you have questions about our use of cookies, contact us at privacy@stephensgate.ng.
     `,
     },
     "Sitemap": {
@@ -123,7 +124,7 @@ If you have questions about our use of cookies, contact us at privacy@padestate.
 ## Site Pages
 
 **Main Navigation**
-- Home — Overview of PadEstate with featured listings and search
+- Home — Overview of Stephen's Gate with featured listings and search
 - Properties — Full listing catalogue with filtering by location, price, and property class
 - About — Company story, mission, statistics, and team profiles
 - Contact — Enquiry form and office contact details
@@ -150,7 +151,7 @@ If you have questions about our use of cookies, contact us at privacy@padestate.
 
 **Contact**
 - 14 Adeola Odeku Street, 5th Floor, Victoria Island, Lagos
-- hello@padestate.ng
+- hello@stephensgate.ng
 - +234 (0) 812 345 6789
     `,
     },
@@ -229,7 +230,7 @@ function LegalModal({ title, onClose }) {
                         className="text-secondary hover:text-on-surface transition-colors p-1 rounded"
                         aria-label="Close"
                     >
-                        <span className="material-symbols-outlined">close</span>
+                        <Icon name="close" size={24} />
                     </button>
                 </div>
 
@@ -261,8 +262,8 @@ function Footer() {
                 <div className="max-w-container-max mx-auto px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md">
                     {/* Brand & copyright */}
                     <div className="flex flex-col items-center md:items-start">
-                        <span className="font-headline-md font-bold text-on-surface text-2xl">PADESTATE</span>
-                        <p className="mt-2 text-secondary text-sm">© 2025 PadEstate Nigeria Limited. All rights reserved.</p>
+                        <span className="font-headline-md font-bold text-on-surface text-2xl">STEPHEN'S GATE</span>
+                        <p className="mt-2 text-secondary text-sm">© 2026 Stephen's Gate Nigeria Limited. All rights reserved.</p>
                     </div>
 
                     {/* Links */}

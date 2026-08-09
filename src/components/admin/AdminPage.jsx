@@ -3,6 +3,7 @@ import { LISTINGS } from "../../data/listings";
 import AdminLogin from "./AdminLogin";
 import AdminListingsTable from "./AdminListingsTable";
 import ListingFormModal from "./ListingFormModal";
+import Icon from "../Icon";
 
 function AdminPage({ onNavigate }) {
     const [authed, setAuthed]       = useState(false);
@@ -43,16 +44,16 @@ function AdminPage({ onNavigate }) {
                         className="text-secondary hover:text-on-surface transition-colors"
                         aria-label="Back to site"
                     >
-                        <span className="material-symbols-outlined">arrow_back</span>
+                        <Icon name="arrow_back" size={24} />
                     </button>
-                    <span className="font-bold text-on-surface text-lg">PADESTATE</span>
+                    <span className="font-bold text-on-surface text-lg">STEPHEN'S GATE</span>
                     <span className="text-secondary text-sm hidden sm:inline">/ Admin</span>
                 </div>
                 <button
                     onClick={() => setAuthed(false)}
                     className="flex items-center gap-1.5 text-sm text-secondary hover:text-error transition-colors"
                 >
-                    <span className="material-symbols-outlined text-base">logout</span>
+                    <Icon name="logout" size={18} />
                     Sign out
                 </button>
             </header>
@@ -69,7 +70,7 @@ function AdminPage({ onNavigate }) {
                         onClick={() => setModal("add")}
                         className="inline-flex items-center gap-2 bg-primary text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-on-primary-fixed-variant transition-colors"
                     >
-                        <span className="material-symbols-outlined text-base">add</span>
+                        <Icon name="add" size={18} />
                         Add Listing
                     </button>
                 </div>
@@ -83,7 +84,7 @@ function AdminPage({ onNavigate }) {
                         { label: "Land Plots", value: listings.filter((l) => l.propertyClass === "Land").length, icon: "landscape" },
                     ].map(({ label, value, icon }) => (
                         <div key={label} className="bg-surface-container-lowest border border-outline-variant rounded-xl p-4 flex items-center gap-3">
-                            <span className="material-symbols-outlined text-primary text-2xl">{icon}</span>
+                            <Icon name={icon} size={24} className="text-primary" />
                             <div>
                                 <p className="text-2xl font-bold text-on-surface">{value}</p>
                                 <p className="text-xs text-secondary uppercase tracking-widest">{label}</p>

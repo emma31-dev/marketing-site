@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Icon from "../Icon";
 
 function AdminLogin({ onLogin }) {
     const [password, setPassword] = useState("");
@@ -20,7 +21,7 @@ function AdminLogin({ onLogin }) {
             <div className="w-full max-w-sm">
                 {/* Logo */}
                 <div className="text-center mb-8">
-                    <span className="text-3xl font-bold text-on-surface">PADESTATE</span>
+                    <span className="text-3xl font-bold text-on-surface">STEPHEN'S GATE</span>
                     <p className="text-secondary text-sm mt-2 uppercase tracking-widest font-label-caps">Admin Portal</p>
                 </div>
 
@@ -51,14 +52,12 @@ function AdminLogin({ onLogin }) {
                                     className="absolute right-3 top-1/2 -translate-y-1/2 text-secondary hover:text-on-surface transition-colors"
                                     aria-label={showPw ? "Hide password" : "Show password"}
                                 >
-                                    <span className="material-symbols-outlined text-xl">
-                                        {showPw ? "visibility_off" : "visibility"}
-                                    </span>
+                                    <Icon name={showPw ? "visibility_off" : "visibility"} size={20} />
                                 </button>
                             </div>
                             {error && (
                                 <p className="text-error text-sm mt-2 flex items-center gap-1">
-                                    <span className="material-symbols-outlined text-base">error</span>
+                                    <Icon name="error" size={18} />
                                     {error}
                                 </p>
                             )}

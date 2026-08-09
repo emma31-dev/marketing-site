@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from "react";
 import { ALL_CITIES, ALL_STATES, PRICE_RANGES, PROPERTY_CLASSES } from "../data/listings";
+import Icon from "./Icon";
 
 // Build suggestion pool: individual cities + states
 const LOCATION_SUGGESTIONS = [
@@ -70,7 +71,7 @@ function ListingsSearchBar({ filters, onFilterChange }) {
             {/* ── Location input with autocomplete ── */}
             <div className="flex-grow relative" ref={wrapperRef}>
                 <div className="flex items-center border-b-2 border-transparent focus-within:border-primary transition-colors p-2 gap-2">
-                    <span className="material-symbols-outlined text-secondary shrink-0">location_on</span>
+                    <Icon name="location_on" size={24} className="text-secondary shrink-0" />
                     <input
                         type="text"
                         value={inputValue}
@@ -88,7 +89,7 @@ function ListingsSearchBar({ filters, onFilterChange }) {
                             className="text-secondary hover:text-on-surface transition-colors shrink-0"
                             aria-label="Clear location"
                         >
-                            <span className="material-symbols-outlined text-base">close</span>
+                            <Icon name="close" size={18} />
                         </button>
                     )}
                 </div>
@@ -106,9 +107,7 @@ function ListingsSearchBar({ filters, onFilterChange }) {
                                     onClick={() => handleSuggestionClick(s)}
                                     className="w-full flex items-center gap-3 px-4 py-3 text-left hover:bg-surface-container-low transition-colors"
                                 >
-                                    <span className="material-symbols-outlined text-secondary text-sm">
-                                        {s.type === "state" ? "map" : "location_city"}
-                                    </span>
+                                    <Icon name={s.type === "state" ? "map" : "location_city"} size={18} className="text-secondary shrink-0" />
                                     <span className="text-base text-on-surface">{s.label}</span>
                                     <span className="ml-auto text-xs text-secondary uppercase tracking-widest">
                                         {s.type}
@@ -124,7 +123,7 @@ function ListingsSearchBar({ filters, onFilterChange }) {
 
             {/* ── Property class ── */}
             <div className="flex items-center gap-2 border-b-2 border-transparent focus-within:border-primary transition-colors p-2 md:min-w-[180px] relative">
-                <span className="material-symbols-outlined text-secondary shrink-0">home_work</span>
+                <Icon name="home_work" size={24} className="text-secondary shrink-0" />
                 <select
                     value={filters.propertyClass}
                     onChange={(e) => onFilterChange({ propertyClass: e.target.value })}
@@ -135,14 +134,14 @@ function ListingsSearchBar({ filters, onFilterChange }) {
                         <option key={c} value={c}>{c}</option>
                     ))}
                 </select>
-                <span className="material-symbols-outlined text-secondary pointer-events-none shrink-0">arrow_drop_down</span>
+                <Icon name="arrow_drop_down" size={24} className="text-secondary pointer-events-none shrink-0" />
             </div>
 
             <div className="h-px md:h-auto md:w-px bg-surface-container-high" />
 
             {/* ── Price range ── */}
             <div className="flex items-center gap-2 border-b-2 border-transparent focus-within:border-primary transition-colors p-2 md:min-w-[180px] relative">
-                <span className="material-symbols-outlined text-secondary shrink-0">payments</span>
+                <Icon name="payments" size={24} className="text-secondary shrink-0" />
                 <select
                     value={filters.priceRange}
                     onChange={(e) => onFilterChange({ priceRange: e.target.value })}
@@ -153,7 +152,7 @@ function ListingsSearchBar({ filters, onFilterChange }) {
                         <option key={r.label} value={r.label}>{r.label}</option>
                     ))}
                 </select>
-                <span className="material-symbols-outlined text-secondary pointer-events-none shrink-0">arrow_drop_down</span>
+                <Icon name="arrow_drop_down" size={24} className="text-secondary pointer-events-none shrink-0" />
             </div>
         </div>
     );

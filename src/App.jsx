@@ -1,6 +1,7 @@
 import { useState, lazy, Suspense } from "react";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Icon from "./components/Icon";
 import "./App.css";
 
 // Lazy-loaded pages — each splits into its own JS chunk
@@ -14,9 +15,7 @@ function ListingsSkeleton() {
     return (
         <div className="flex-grow flex items-center justify-center min-h-[60vh]">
             <div className="flex flex-col items-center gap-4 text-secondary">
-                <span className="material-symbols-outlined text-4xl animate-spin" style={{ animationDuration: "1s" }}>
-                    progress_activity
-                </span>
+                <Icon name="progress_activity" size={40} className="animate-spin" style={{ animationDuration: "1s" }} />
                 <p className="text-sm uppercase tracking-widest font-label-caps">Loading listings</p>
             </div>
         </div>
@@ -41,7 +40,27 @@ function App() {
     }
 
     return (
-        <div className="bg-surface text-on-surface font-body-md antialiased overflow-x-hidden pt-20 min-h-screen flex flex-col">
+        <div
+            className="text-on-surface font-body-md antialiased overflow-x-hidden min-h-screen flex flex-col relative"
+            // style={{ backgroundColor: "#C4CEFF" }}
+        >
+            {/* Fixed background SVG at reduced opacity */}
+            <div
+                aria-hidden="true"
+                style={{
+                    position: "fixed",
+                    inset: 0,
+                    backgroundImage: "url('/large-triangles.svg')",
+                    backgroundRepeat: "repeat",
+                    backgroundSize: "540px 450px",
+                    backgroundAttachment: "fixed",
+                    opacity: 0.35,
+                    zIndex: 0,
+                    pointerEvents: "none",
+                }}
+            />
+            {/* Page content sits above the background */}
+            <div className="relative z-10 flex flex-col min-h-screen pt-20">
             <Navbar activePage={page} onNavigate={navigate} />
 
             <div key={page} className="page-enter flex-grow flex flex-col">
@@ -62,6 +81,7 @@ function App() {
 
             <Footer />
         </div>
+    </div>
     );
 }
 

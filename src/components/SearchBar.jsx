@@ -1,3 +1,5 @@
+import Icon from "./Icon";
+
 /**
  * SearchBar — used on both LandingPage (3-field) and AllListingsPage (2-field).
  *
@@ -10,7 +12,7 @@ function SearchBar({ variant = "landing" }) {
             <div className="bg-white border border-surface-container-high rounded-lg p-2 flex flex-col md:flex-row items-center gap-4 shadow-sm">
                 {/* Location */}
                 <div className="flex-grow flex items-center border-b-2 border-transparent focus-within:border-primary transition-colors w-full md:w-auto p-2">
-                    <span className="material-symbols-outlined text-secondary mr-2">location_on</span>
+                    <Icon name="location_on" size={24} className="text-secondary mr-2 shrink-0" />
                     <input
                         type="text"
                         placeholder="Filter by city or area..."
@@ -22,7 +24,7 @@ function SearchBar({ variant = "landing" }) {
 
                 {/* Class of house */}
                 <div className="flex-grow flex items-center border-b-2 border-transparent focus-within:border-primary transition-colors w-full md:w-auto p-2 relative">
-                    <span className="material-symbols-outlined text-secondary mr-2">home_work</span>
+                    <Icon name="home_work" size={24} className="text-secondary mr-2 shrink-0" />
                     <select
                         className="w-full bg-transparent border-none focus:ring-0 text-base text-on-surface cursor-pointer focus:outline-none appearance-none"
                         defaultValue=""
@@ -34,12 +36,12 @@ function SearchBar({ variant = "landing" }) {
                         <option value="penthouse">Penthouse</option>
                         <option value="duplex">Duplex</option>
                     </select>
-                    <span className="material-symbols-outlined text-secondary absolute right-2 pointer-events-none">arrow_drop_down</span>
+                    <Icon name="arrow_drop_down" size={24} className="text-secondary absolute right-2 pointer-events-none" />
                 </div>
 
                 {/* Search button */}
                 <button className="bg-primary text-white py-3 px-8 rounded-lg hover:bg-on-primary-fixed-variant transition-colors duration-200 w-full md:w-auto flex items-center justify-center gap-2">
-                    <span className="material-symbols-outlined">search</span> Search
+                    <Icon name="search" size={20} /> Search
                 </button>
             </div>
         );
@@ -93,7 +95,7 @@ function SearchBar({ variant = "landing" }) {
 
             {/* Search button */}
             <button className="bg-on-surface text-on-primary p-4 rounded hover:bg-secondary transition-colors flex items-center justify-center">
-                <span className="material-symbols-outlined">search</span>
+                <Icon name="search" size={24} />
             </button>
         </div>
     );

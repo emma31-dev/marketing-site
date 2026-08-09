@@ -1,4 +1,5 @@
 import PropertyCard from "./PropertyCard";
+import Icon from "./Icon";
 
 const FEATURED_PROPERTIES = [
     {
@@ -48,7 +49,7 @@ function FeaturedProperties({ onNavigate }) {
                         onClick={() => onNavigate("listings")}
                         className="hidden sm:inline-flex items-center text-primary font-label-caps text-xs hover:text-on-primary-fixed-variant transition-colors uppercase tracking-widest"
                     >
-                        View All <span className="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+                        View All <Icon name="arrow_forward" size={16} className="ml-2" />
                     </button>
                 </div>
 

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Icon from "./Icon";
 
 function ContactPage() {
     const [submitted, setSubmitted] = useState(false);
@@ -22,7 +23,7 @@ function ContactPage() {
     };
 
     return (
-        <main className="bg-surface text-on-surface">
+        <main className="text-on-surface">
             {/* Header */}
             <section className="max-w-container-max mx-auto px-gutter pt-section-padding-mobile md:pt-section-padding-desktop pb-16 text-center">
                 <span className="inline-block font-label-caps text-xs text-primary uppercase tracking-widest mb-4">
@@ -48,12 +49,12 @@ function ContactPage() {
                                 {[
                                     { icon: "location_on", label: "Office", value: "14 Adeola Odeku Street, 5th Floor\nVictoria Island, Lagos 101241" },
                                     { icon: "phone", label: "Phone", value: "+234 (0) 812 345 6789" },
-                                    { icon: "mail", label: "Email", value: "hello@padestate.ng" },
+                                    { icon: "mail", label: "Email", value: "hello@stephensgate.ng" },
                                     { icon: "schedule", label: "Hours", value: "Mon – Fri, 8am – 5pm WAT" },
                                 ].map(({ icon, label, value }) => (
                                     <li key={label} className="flex items-start gap-4">
                                         <div className="w-10 h-10 rounded-full bg-surface-container-low flex items-center justify-center flex-shrink-0 mt-0.5">
-                                            <span className="material-symbols-outlined text-primary text-xl">{icon}</span>
+                                            <Icon name={icon} size={20} className="text-primary" />
                                         </div>
                                         <div>
                                             <p className="font-label-caps text-xs text-secondary uppercase tracking-widest mb-1">{label}</p>
@@ -89,7 +90,7 @@ function ContactPage() {
                         <div className="bg-surface-container-lowest border border-outline-variant rounded-xl p-8 md:p-10">
                             {submitted ? (
                                 <div className="flex flex-col items-center text-center py-12 gap-4">
-                                    <span className="material-symbols-outlined text-5xl text-primary">check_circle</span>
+                                    <Icon name="check_circle" size={48} className="text-primary" />
                                     <h3 className="text-2xl font-semibold text-on-surface">Message sent!</h3>
                                     <p className="text-secondary text-base max-w-sm">
                                         Thanks for reaching out. One of our advisors will contact you within one business day.
@@ -192,9 +193,7 @@ function ContactPage() {
                                                 <option value="investment">Investment advice</option>
                                                 <option value="other">Something else</option>
                                             </select>
-                                            <span className="material-symbols-outlined text-secondary absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                                                arrow_drop_down
-                                            </span>
+                                            <Icon name="arrow_drop_down" size={24} className="text-secondary absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none" />
                                         </div>
                                     </div>
 

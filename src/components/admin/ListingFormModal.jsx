@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { PROPERTY_CLASSES, FILTER_TABS } from "../../data/listings";
+import Icon from "../Icon";
 
 const CLASS_OPTIONS = PROPERTY_CLASSES.filter((c) => c !== "Any Class");
 const TAG_OPTIONS   = FILTER_TABS.filter((t) => t !== "All");
@@ -147,7 +148,7 @@ function ListingFormModal({ listing, onSave, onClose }) {
                         {isEdit ? "Edit Listing" : "Add New Listing"}
                     </h2>
                     <button onClick={onClose} className="text-secondary hover:text-on-surface transition-colors" aria-label="Close">
-                        <span className="material-symbols-outlined">close</span>
+                        <Icon name="close" size={24} />
                     </button>
                 </div>
 
@@ -196,7 +197,7 @@ function ListingFormModal({ listing, onSave, onClose }) {
                                     className="w-full border border-outline-variant rounded-lg px-4 py-3 text-base bg-transparent text-on-surface focus:outline-none focus:border-primary transition-colors appearance-none cursor-pointer">
                                     {CLASS_OPTIONS.map((c) => <option key={c} value={c}>{c}</option>)}
                                 </select>
-                                <span className="material-symbols-outlined text-secondary absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">arrow_drop_down</span>
+                                <Icon name="arrow_drop_down" size={24} className="text-secondary absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none" />
                             </div>
                         </div>
                         <div>
